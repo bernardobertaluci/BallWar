@@ -4,8 +4,8 @@ using UnityEngine;
 public class BallControlles : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] float _xMin, _xMax, _yMin, _yMax;
-    [SerializeField] float _tilt;
+    [SerializeField] private float _xMin, _xMax, _yMin, _yMax;
+    [SerializeField] private float _tilt;
 
     private Quaternion _calibrationQuaternion;
     private Rigidbody _rigibody;

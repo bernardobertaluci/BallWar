@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Earth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public void Die()
     {
-        
+        Destroy(gameObject);
+        Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
