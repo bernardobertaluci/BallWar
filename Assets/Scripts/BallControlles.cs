@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class BallControlles : MonoBehaviour
 {
     [SerializeField] private float _speed;
@@ -8,11 +8,11 @@ public class BallControlles : MonoBehaviour
     [SerializeField] private float _tilt;
 
     private Quaternion _calibrationQuaternion;
-    private Rigidbody _rigibody;
+    private Rigidbody2D _rigibody;
 
     private void Start()
     {
-        _rigibody = GetComponent<Rigidbody>();
+        _rigibody = GetComponent<Rigidbody2D>();
         CalibrateAccelerometr();
     }
 
@@ -35,7 +35,7 @@ public class BallControlles : MonoBehaviour
         Vector3 accelerationRaw = Input.acceleration;
         Vector3 acceleration = FixAcceleration(accelerationRaw);
 
-        _rigibody.rotation = Quaternion.Euler(0f, 0f, _rigibody.velocity.x * -_tilt);
+        //_rigibody.rotation = Quaternion.Euler(0f, 0f, _rigibody.velocity.x * -_tilt);
         _rigibody.velocity = new Vector3(acceleration.x,acceleration.y, 0f) * _speed;
 
         _rigibody.position = new Vector3(Mathf.Clamp(_rigibody.position.x, _xMin, _xMax), Mathf.Clamp(_rigibody.position.y, _yMin, _yMax),0);

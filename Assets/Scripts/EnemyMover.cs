@@ -12,7 +12,11 @@ public class EnemyMover : MonoBehaviour
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        Mover();
+    }
 
+    private void Mover()
+    {
         Vector2 direction = new Vector2(Random.Range(-80.0f, 80.0f), Random.Range(-80.0f, -50f));
         _rigidbody.AddForce(direction, ForceMode2D.Force);
     }
