@@ -230,10 +230,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1618,8 +1618,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d61b4b119f210f4c9529374882cd591
-      internalID: -695246288
+      spriteID: b41b3692abb70d247985948dbddfd6ae
+      internalID: -665386251
       vertices: []
       indices: 
       edges: []
@@ -1639,8 +1639,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66bbd68a47267ce479f7fbe50bd842dd
-      internalID: -1518036623
+      spriteID: ded2418aa4b9ebd408e6432e3771412c
+      internalID: 488100424
       vertices: []
       indices: 
       edges: []
@@ -1660,8 +1660,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97facc2dfd42bc7408770ba109eb1b30
-      internalID: -893341030
+      spriteID: 8739952b0db339245867af80097841a3
+      internalID: -951745063
       vertices: []
       indices: 
       edges: []
@@ -1681,8 +1681,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c2c9debd208e6549be59db771029e6b
-      internalID: 1865587739
+      spriteID: f3959e0f8e2e7d34fb4ae18e8d86fe15
+      internalID: 519860728
       vertices: []
       indices: 
       edges: []
@@ -1702,8 +1702,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47d19901753aef8449ddf61d4771fcc6
-      internalID: 2249427
+      spriteID: 6b6f3a7ed60046d4c99648ce50406de3
+      internalID: 1763761066
       vertices: []
       indices: 
       edges: []
@@ -1723,8 +1723,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d11d142824c9a74eb2e0b99f29c1364
-      internalID: 1791623675
+      spriteID: 90c845802c91565449d936473773f2ee
+      internalID: 2017060512
       vertices: []
       indices: 
       edges: []
@@ -1744,8 +1744,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616a04289b7361b47bf8085f9a3593eb
-      internalID: 712928373
+      spriteID: 88dfdd41143fc3044a14d0251dd95848
+      internalID: -1677403988
       vertices: []
       indices: 
       edges: []
@@ -1753,7 +1753,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9ae4c8d84ccf7dc4890db49cf9536092
+    spriteID: 7922ef689f76a0f42af6a894d049b3da
     internalID: 0
     vertices: []
     indices: 
@@ -1766,7 +1766,7 @@ TextureImporter:
       GUI_3: 21300006
       GUI_2: 21300004
       GUI_11: 21300022
-      GUI_50: 712928373
+      GUI_50: -1677403988
       GUI_56: 21300098
       GUI_44: 21300078
       GUI_68: 21300122
@@ -1776,9 +1776,9 @@ TextureImporter:
       GUI_13: 21300026
       GUI_12: 21300024
       GUI_47: 21300084
-      GUI_41: 2249427
-      GUI_49: 1791623675
-      GUI_37: -695246288
+      GUI_41: 1763761066
+      GUI_49: 2017060512
+      GUI_37: -665386251
       GUI_9: 21300018
       GUI_57: 21300100
       GUI_43: 21300076
@@ -1787,18 +1787,18 @@ TextureImporter:
       GUI_45: 21300080
       GUI_62: 21300110
       GUI_16: 21300032
+      GUI_52: 21300090
       GUI_7: 21300014
-      GUI_8: 21300016
       GUI_10: 21300020
+      GUI_8: 21300016
       GUI_31: 21300062
       GUI_27: 21300054
-      GUI_39: -893341030
+      GUI_60: 21300106
       GUI_28: 21300056
       GUI_5: 21300010
-      GUI_52: 21300090
+      GUI_39: -951745063
       GUI_0: 21300000
       GUI_61: 21300108
-      GUI_60: 21300106
       GUI_42: 21300074
       GUI_34: 21300068
       GUI_32: 21300064
@@ -1819,8 +1819,8 @@ TextureImporter:
       GUI_23: 21300046
       GUI_35: 21300070
       GUI_36: 21300072
-      GUI_38: -1518036623
-      GUI_40: 1865587739
+      GUI_38: 488100424
+      GUI_40: 519860728
       GUI_17: 21300034
       GUI_46: 21300082
       GUI_48: 21300086
