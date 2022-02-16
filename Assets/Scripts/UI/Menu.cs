@@ -8,18 +8,8 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private EnemyMover _enemy;
     [SerializeField] private Player _player;
-    [SerializeField] private Score _score;
-    [SerializeField] private GameOverScreen _gameOverScreen;
+    [SerializeField] private Timer _score;
 
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-        
-    }
     public void OpenPanel(GameObject panel)
     {
         panel.SetActive(true);
@@ -30,6 +20,12 @@ public class Menu : MonoBehaviour
     {
         panel.SetActive(false);
         Time.timeScale = 1;
+        if(_player.IsAlive == false)
+        {
+            _enemy.ResetEnemy();
+            _player.ResetPlayer();
+            _score.ResetTimer();
+        }
     } 
 
     public void Exit()
@@ -37,19 +33,12 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Restart()
+    public void Restart(GameObject panel)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        panel.SetActive(false);
         _enemy.ResetEnemy();
+        _player.ResetPlayer();
+        _score.ResetTimer();
         Time.timeScale = 1;
-        _enemy.Mover();
-    }
-
-    private void OnRestartButtonClick()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
-        _enemy.ResetEnemy();
-        _enemy.Mover();
     }
 }
