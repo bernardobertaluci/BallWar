@@ -9,9 +9,10 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private Vector2 _startPosition;
     [SerializeField] private FreezeDebuff _debuff;
     [SerializeField] private float _freezingTime;
+    [SerializeField] private SpriteRenderer _sprite;
 
     private Rigidbody2D _rigidbody;
-    private Vector2 _currentPosition;
+
     private void OnEnable()
     {
         _debuff.EnemyFreezed += OnEnemyFreezed;
@@ -48,11 +49,13 @@ public class EnemyMover : MonoBehaviour
 
     private IEnumerator FreezePosition()
     {
-        _currentPosition = transform.position;
         _rigidbody.Sleep();
+        _sprite.color = new Color(255, 255, 255, 1f); 
 
         yield return new WaitForSeconds(_freezingTime);
-        _rigidbody.WakeUp();
 
+        _speed = 10;
+        _sprite.color = new Color(0, 0, 0, 0f);
+        Mover();
     }
 }

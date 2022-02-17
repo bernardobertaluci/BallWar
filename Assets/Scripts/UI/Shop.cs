@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shop : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject _itemContainer;
     [SerializeField] private BuffView _template;
 
+    public event UnityAction BuffSaled;
+
+    private void OnDisable()
+    {
+        _template.SellButtonClick -= OnSellButtonClick;
+    }
     private void Start()
     {
         for (int i = 0; i < _buffs.Count; i++)
@@ -34,8 +41,7 @@ public class Shop : MonoBehaviour
         if(buff.Price <= _player.Money)
         {
             _player.BuyBuff(buff);
-            buff.Buy();
-            buffView.SellButtonClick -= OnSellButtonClick;
+            BuffSaled?.Invoke();
         }
     }
 }

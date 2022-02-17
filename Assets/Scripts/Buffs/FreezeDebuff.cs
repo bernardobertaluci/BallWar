@@ -23,4 +23,14 @@ public class FreezeDebuff : MonoBehaviour
     {
         EnemyFreezed?.Invoke();
     }
+
+    public void Deactivate()
+    {
+        _button.interactable = false;
+    }
+
+    public void Activate()
+    {
+        _button.interactable = true;
+    }
 }

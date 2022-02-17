@@ -13,18 +13,16 @@ public class BuffView : MonoBehaviour
 
     private Buff _buff;
 
-
     public event UnityAction<Buff, BuffView> SellButtonClick;
+
     private void OnEnable()
     {
         _sellButton.onClick.AddListener(OnButtonClick);
-        _sellButton.onClick.AddListener(TryLockItem);
     }
 
     private void OnDisable()
     {
         _sellButton.onClick.RemoveListener(OnButtonClick);
-        _sellButton.onClick.RemoveListener(TryLockItem);
     }
     public void Render(Buff buff)
     {
@@ -36,11 +34,5 @@ public class BuffView : MonoBehaviour
     private void OnButtonClick()
     {
         SellButtonClick?.Invoke(_buff, this);
-    }
-
-    private void TryLockItem()
-    {
-        if (_buff.IsBuyed)
-            _sellButton.interactable = false;
     }
 }

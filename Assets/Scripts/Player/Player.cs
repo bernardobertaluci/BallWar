@@ -9,8 +9,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Timer _timer;
 
     private int _money;
-
-    private List<Buff> _buffs;
     public int Money => _money;
 
     public bool IsAlive { get; private set; }
@@ -42,7 +40,6 @@ public class Player : MonoBehaviour
     {
         _money -= buff.Price;
         MoneyChanged?.Invoke(_money);
-        _buffs.Add(buff);
     }
 
     public void ResetPlayer()
