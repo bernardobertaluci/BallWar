@@ -8,11 +8,6 @@ public class GameOverScreen : Screen
 {
     public event UnityAction RestartButtonClick;
 
-    protected override void OnButtonClick()
-    {
-        RestartButtonClick?.Invoke();
-    }
-
     public override void Open()
     {
         CanvasGroup.alpha = 1;
@@ -20,11 +15,15 @@ public class GameOverScreen : Screen
         CanvasGroup.blocksRaycasts = true;
     }
 
-
     public override void Close()
     {
         CanvasGroup.alpha = 0;
         Button.interactable = false;
         CanvasGroup.blocksRaycasts = false;
+    }
+
+    protected override void OnButtonClick()
+    {
+        RestartButtonClick?.Invoke();
     }
 }

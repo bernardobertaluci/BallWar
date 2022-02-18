@@ -10,6 +10,7 @@ public class Freeze : Buff
     [SerializeField] protected FreezeDebuff _freezeDebuff;
 
     protected int CurrentCount;
+
     private void OnEnable()
     {
         _freezeDebuff.EnemyFreezed += OnEnemyFreezed;

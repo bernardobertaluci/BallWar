@@ -22,6 +22,7 @@ public class EnemyMover : MonoBehaviour
     {
         _debuff.EnemyFreezed -= OnEnemyFreezed;
     }
+
     private void Start()
     {
         transform.position = _startPosition;

@@ -23,14 +23,15 @@ public class Timer : MonoBehaviour
     {
         _player.Dying -= OnDying;
     }
-    private void Update()
-    {
-        ChangeScore();
-    }
 
     private void Start()
     {
         _pastTimeText.text = _startPastTime.ToString();
+    }
+
+    private void Update()
+    {
+        ChangeScore();
     }
 
     public void ResetTimer()

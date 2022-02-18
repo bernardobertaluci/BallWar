@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Timer _timer;
 
     private int _money;
+
     public int Money => _money;
 
     public bool IsAlive { get; private set; }
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
         IsAlive = true;
         transform.position = _startPosition;
     }
+
     private void OnTimerChanged(float time)
     {
         _money += (int)time;

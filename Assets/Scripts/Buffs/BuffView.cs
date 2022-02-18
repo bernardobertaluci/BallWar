@@ -24,6 +24,7 @@ public class BuffView : MonoBehaviour
     {
         _sellButton.onClick.RemoveListener(OnButtonClick);
     }
+
     public void Render(Buff buff)
     {
         _buff = buff;

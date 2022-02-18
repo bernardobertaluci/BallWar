@@ -33,10 +33,10 @@ public class Shop : MonoBehaviour
 
     private void OnSellButtonClick(Buff buff, BuffView buffView)
     {
-        TrySellBuff(buff, buffView);
+        SellBuff(buff, buffView);
     }
 
-    private void TrySellBuff(Buff buff, BuffView buffView)
+    private void SellBuff(Buff buff, BuffView buffView)
     {
         if(buff.Price <= _player.Money)
         {

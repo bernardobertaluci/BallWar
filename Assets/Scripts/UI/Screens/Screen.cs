@@ -18,9 +18,9 @@ public abstract class Screen : MonoBehaviour
         Button.onClick.RemoveListener(OnButtonClick);
     }
 
-    protected abstract void OnButtonClick();
-
     public abstract void Open();
 
     public abstract void Close();
+
+    protected abstract void OnButtonClick();   
 }

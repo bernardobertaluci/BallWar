@@ -19,6 +19,7 @@ public class FreezeDebuff : MonoBehaviour
     {
         _button.onClick.RemoveListener(OnClickFreezeButton);
     }
+
     public void OnClickFreezeButton()
     {
         EnemyFreezed?.Invoke();

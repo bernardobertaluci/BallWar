@@ -4,7 +4,10 @@ using UnityEngine;
 public class EarthControlles : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _xMin, _xMax, _yMin, _yMax;
+    [SerializeField] private float _xMin;
+    [SerializeField] private float _xMax;
+    [SerializeField] private float _yMin;
+    [SerializeField] private float _yMax;
 
     private Quaternion _calibrationQuaternion;
     private Rigidbody2D _rigibody;
@@ -13,6 +16,16 @@ public class EarthControlles : MonoBehaviour
     {
         _rigibody = GetComponent<Rigidbody2D>();
         CalibrateAccelerometr();
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 accelerationRaw = Input.acceleration;
+        Vector3 acceleration = FixAcceleration(accelerationRaw);
+
+        _rigibody.velocity = new Vector3(acceleration.x, acceleration.y, 0f) * _speed;
+
+        _rigibody.position = new Vector3(Mathf.Clamp(_rigibody.position.x, _xMin, _xMax), Mathf.Clamp(_rigibody.position.y, _yMin, _yMax), 0);
     }
 
     private void CalibrateAccelerometr()
@@ -27,15 +40,5 @@ public class EarthControlles : MonoBehaviour
     {
         Vector3 fixedAcceleration = _calibrationQuaternion * acceleration;
         return fixedAcceleration;
-    }
-
-    private void FixedUpdate()
-    {
-        Vector3 accelerationRaw = Input.acceleration;
-        Vector3 acceleration = FixAcceleration(accelerationRaw);
-
-        _rigibody.velocity = new Vector3(acceleration.x,acceleration.y, 0f) * _speed;
-
-        _rigibody.position = new Vector3(Mathf.Clamp(_rigibody.position.x, _xMin, _xMax), Mathf.Clamp(_rigibody.position.y, _yMin, _yMax),0);
-    }
+    } 
 }
